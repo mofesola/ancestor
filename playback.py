@@ -10,3 +10,6 @@ class Playback:
         print("Playing file " + Playback.get_file() + "...")
         playsound("sounds/" + Playback.get_file())
 
+
+if __name__ == "__main__":
+    Playback.playsound()
