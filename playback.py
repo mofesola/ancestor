@@ -8,9 +8,10 @@ class Playback:
         return random.choice(os.listdir("sounds/"))
     
     def playsound():
-        print("Playing file " + Playback.get_file() + "...")
+        file_name = Playback.get_file() 
+        print("Playing file " + file_name + "...")
         pygame.mixer.init()
-        pygame.mixer.music.load("sounds/" + Playback.get_file())
+        pygame.mixer.music.load("sounds/" + file_name)
         pygame.mixer.music.play()
         while pygame.mixer.music.get_busy() == True:
             continue
