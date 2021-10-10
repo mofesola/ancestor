@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  ancestor:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - "./recordings:/usr/src/recordings"
+      - "./sounds:/usr/src/sounds"
+    devices:
+      - "/dev/snd:/dev/snd"
+    restart: unless-stopped

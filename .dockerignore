@@ -1,0 +1,8 @@
+recordings
+sounds
+Dockerfile
+docker-compose.yml
+venv
+.dockerignore
+.gitignore
+.DS_Store
