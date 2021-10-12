@@ -9,3 +9,4 @@ pvrhino==1.6.3
 PyAudio==0.2.11
 pycparser==2.20
 SoundFile==0.10.3.post1
+pygame==2.0.2

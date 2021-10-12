@@ -1,6 +1,5 @@
-from playsound import playsound
 import os, random
-#import pygame
+import pygame
 
 class Playback:
 
@@ -9,12 +8,18 @@ class Playback:
     
     def playsound():
         file_name = Playback.get_file() 
-        print("Playing file " + file_name + "...")
-        playsound("sounds/" + file_name)
-    
-    def talk_to_me():
-        playsound("recordings/talk_to_me.mp3")
+        Playback.pygame_play("sounds/" +file_name)
 
+    def talk_to_me():
+        Playback.pygame_play("recordings/talk_to_me.mp3")
+
+    def pygame_play(file_name):
+        print("Playing file " + file_name + "...")
+        pygame.mixer.init()
+        pygame.mixer.music.load(file_name)
+        pygame.mixer.music.play()
+        while pygame.mixer.music.get_busy() == True:
+            continue
 
 if __name__ == "__main__":
     Playback.playsound()

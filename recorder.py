@@ -22,6 +22,7 @@ class Recorder:
             #porcupine = pvporcupine.create(keyword_paths=['config/ancestor.ppn'])
             porcupine = pvporcupine.create(keywords=["computer"])
             pa = pyaudio.PyAudio()
+            print("Listening for Hotword")
             audio_stream = pa.open(
                             rate=porcupine.sample_rate,
                             channels=1,
@@ -30,7 +31,6 @@ class Recorder:
                             frames_per_buffer=porcupine.frame_length)
 
             while True:
-                print("Listening for Hotword")
                 pcm = audio_stream.read(porcupine.frame_length, exception_on_overflow=False)
                 pcm = struct.unpack_from("h" * porcupine.frame_length, pcm)
 
@@ -41,7 +41,7 @@ class Recorder:
                     # Stop and close the stream 
                     audio_stream.stop_stream()
                     audio_stream.close()
-                    #Playback.talk_to_me()
+                    Playback.talk_to_me()
                     Recorder.record()
                     Playback.playsound()
             
