@@ -30,6 +30,7 @@ class Recorder:
                             frames_per_buffer=porcupine.frame_length)
 
             while True:
+                print("Listening for Hotword")
                 pcm = audio_stream.read(porcupine.frame_length, exception_on_overflow=False)
                 pcm = struct.unpack_from("h" * porcupine.frame_length, pcm)
 
