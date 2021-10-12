@@ -13,7 +13,7 @@ class Playback:
         playsound("sounds/" + file_name)
     
     def talk_to_me():
-        playsound("sounds/talk_to_me.mp3")
+        playsound("recordings/talk_to_me.mp3")
 
 
 if __name__ == "__main__":
