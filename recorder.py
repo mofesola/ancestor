@@ -19,7 +19,8 @@ seconds = Common.recording_duration()
 class Recorder:
     def listen():
         try:
-            porcupine = pvporcupine.create(keyword_paths=['config/ancestor.ppn'])
+            #porcupine = pvporcupine.create(keyword_paths=['config/ancestor.ppn'])
+            porcupine = pvporcupine.create(keywords=["computer"])
             pa = pyaudio.PyAudio()
             audio_stream = pa.open(
                             rate=porcupine.sample_rate,
