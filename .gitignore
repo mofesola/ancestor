@@ -3,3 +3,5 @@
 *.wav
 venv
 .DS_Store
+.vagrant
+!talk_to_me.mp3

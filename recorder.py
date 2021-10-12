@@ -39,6 +39,7 @@ class Recorder:
                     # Stop and close the stream 
                     audio_stream.stop_stream()
                     audio_stream.close()
+                    Playback.talk_to_me()
                     Recorder.record()
                     Playback.playsound()
             

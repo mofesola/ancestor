@@ -6,3 +6,4 @@ venv
 .dockerignore
 .gitignore
 .DS_Store
+.vagrant
