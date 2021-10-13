@@ -11,10 +11,10 @@ class Playback:
         Playback.pygame_play("sounds/" +file_name)
 
     def talk_to_me():
-        Playback.pygame_play("recordings/talk_to_me.mp3")
+        Playback.pygame_play("config/audio/talk_to_me.mp3")
 
     def startup():
-        Playback.pygame_play("recordings/talk_to_me.mp3")
+        Playback.pygame_play("config/audio/ancestors_listening.mp3")
 
     def pygame_play(file_name):
         print("Playing file " + file_name + "...")
