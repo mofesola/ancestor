@@ -6,3 +6,4 @@ venv
 .vagrant
 !talk_to_me.mp3
 *.log
+!ancestors_listening.mp3
