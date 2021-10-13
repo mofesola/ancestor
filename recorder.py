@@ -20,7 +20,7 @@ class Recorder:
     def listen():
         try:
             #porcupine = pvporcupine.create(keyword_paths=['config/ancestor.ppn'])
-            porcupine = pvporcupine.create(keywords=["computer"])
+            porcupine = pvporcupine.create(keywords=["grapefruit"])
             pa = pyaudio.PyAudio()
             print("Listening for Hotword")
             audio_stream = pa.open(
