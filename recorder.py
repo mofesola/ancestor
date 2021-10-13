@@ -18,6 +18,7 @@ seconds = Common.recording_duration()
 
 class Recorder:
     def listen():
+        Playback.startup()
         try:
             #porcupine = pvporcupine.create(keyword_paths=['config/ancestor.ppn'])
             porcupine = pvporcupine.create(keywords=["computer"])
